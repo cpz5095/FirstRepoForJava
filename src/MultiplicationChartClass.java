@@ -8,7 +8,7 @@ class MultiplicationChartClass implements MultiplicationChartInterface {
     public void displayChart() {
         System.out.print("\nX\t|");
         for(int i = 1; i <= n; i++){
-            System.out.print("\t" + i);
+            System.out.printf("%4s",Integer.toString(i));
         }
         System.out.println();
         System.out.print("----|-");
@@ -17,9 +17,10 @@ class MultiplicationChartClass implements MultiplicationChartInterface {
         }
         for(int i = 1; i <= n; i++){
             System.out.print("\n" + i );
-            System.out.print("\t|\t");
+            System.out.print("\t|");
             for(int z = 1; z <= n; z++){
-                System.out.print(z * i + "\t");
+                System.out.printf("%4s", Integer.toString(z * i));
+                //System.out.print(z * i + "\t");
             }
         }
     }
